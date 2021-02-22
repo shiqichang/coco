@@ -26,3 +26,47 @@ WSGI 协议主要包括 server 和 application 两部分：
 - 当服务器使用 CBV 模式时，用户发给服务器的请求包括 URL 和 Method, 这两个信息都是字符串类型。服务器通过路由映射表匹配成功后会自动去找 dispatch 方法，然后 Django 会通过 dispatch 反射的方式找到类中对应的方法并执行。类中的方法执行完毕之后，会把客户端想要的数据返回给 dispatch 方法，由 dispatch 方法把数据返回给客户端。
 
 ## Django 请求的生命周期
+
+![1](https://tva1.sinaimg.cn/large/008eGmZEly1gnu3r9imq8j30pg0tgaf7.jpg)
+
+1. `request wsgi`: 请求封装后交给 `web` 框架 `Flask、Django`;
+2. `request middleware` 中间件：对请求进行校验或在请求对象中添加其它相关数据，例如：`csrf、request.session`;
+3. `url conf` 路由匹配：根据浏览器发送的不同 url 去匹配不同的视图函数；
+4. `view` 视图函数：在视图函数中进行业务逻辑的处理，可能涉及到：`orm、templates => 渲染`；
+5. `view middleware` 中间件：对响应的数据进行处理；
+6. `response wsgi`: 将响应的内容发送给浏览器。
+
+## Django Middlewares 中间件的作用和应用场景
+
+中间件是介于 request 与 response 处理之间的一道处理过程，用于在全局范围内改变 Django 的输入和输出。
+
+简单来说中间件是帮助我们在视图函数执行之前和执行之后都可以做一些额外的操作。
+
+explames:
+
+1. Django 项目中默认启动了 csrf 保护，每次请求时通过 csrf 中间件检查请求中是否有正确的 token 值；
+2. 当用户在页面上发送请求时，通过自定义的认证中间件，判断用户是否已经登录，未登录就去登录；
+3. 当有用户请求时，判断用户是否在白名单或者在黑名单；
+
+内置的五个方法：
+
+1. `process_request`: 请求进来时，权限认证；
+2. `process_view`: 路由匹配之后，能够得到视图函数；
+3. `process_exception`: 异常时执行；
+4. `process_template_response`: 模板渲染时执行；
+5. `process_response`: 请求有响应时执行。
+
+## Django ORM 和 QuerySet
+
+- O (object): 类和对象；
+- R (Relation): 关系，关系数据库中的表格；
+- M (Mapping): 映射。
+
+Django ORM 框架的功能：
+
+1. 建立模型类和表之间的对应关系，允许通过面向对象的方式来操作数据库；
+2. 根据设计的模型类来生成数据库中的表格；
+3. 通过方便的配置进行数据库的切换；
+4. 缺点：性能损耗、过度封装、有一定学习成本。
+
+## 使用 ORM 和原生 SQL 的优缺点

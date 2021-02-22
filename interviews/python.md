@@ -108,14 +108,10 @@ print(random_dict)
 # {1: 37, 2: 68, 3: 75, 4: 83}
 ```
 
-<!-- here -->
-<!-- here -->
-<!-- here -->
-
 ## 7 Python 中单下划线和双下划线
 
 - `__foo__`: 一种约定，python 内部的名字，用来区分其他用户自定义的命名；
-- `_foo`: 一种约定，protected, 用来指定变量私有，不能用 from module import * 导入，其他的和公有一样访问；
+- `_foo`: 一种约定，protected, 用来指定变量私有，不能用 `from module import *` 导入，其他的和公有一样访问；
 - `__foo`: private, 解释器用 _classname__foo 来代替，以区别和其他类相同的命名。
 
 ```python
@@ -177,11 +173,11 @@ print(f"My salary is {salary:10.3f}")
 
 Python 中关键字 yield
 
-- iterables(可迭代对象)：`__iter__()` 返回一个特殊的迭代器对象, 可以用在 for…in… 语句中的都是可迭代的；
+- iterables(可迭代对象)：`__iter__()` 返回一个特殊的迭代器对象, 可以用在 `for…in…` 语句中的都是可迭代的；
 - iterators(迭代器)：`__next__()` 会返回下一个迭代器对象;
 - generators(生成器)：迭代器的一种，只能迭代它一次。它和迭代器的区别是用 () 代替了 [].
 
-`list.extend()`: 只希望接受一个迭代器，不管是 strings, lists, tuples 或 generators. 这种方法叫 duck typing.
+`list.extend()`: 只接收一个迭代器，不管是 `strings, lists, tuples 或 generators`. 这种方法叫 `duck typing`.
 
 ```python
 import itertools
@@ -189,12 +185,14 @@ import itertools
 horses = [1, 2, 3, 4]
 races = itertools.permutations(horses)  # 排列
 print(races)
+print(list(races))
 # <itertools.permutations object at 0x7fb015445678>
+# [(1, 2, 3, 4), (1, 2, 4, 3), (1, 3, 2, 4), (1, 3, 4, 2), (1, 4, 2, 3), (1, 4, 3, 2), (2, 1, 3, 4), (2, 1, 4, 3), (2, 3, 1, 4), (2, 3, 4, 1), (2, 4, 1, 3), (2, 4, 3, 1), (3, 1, 2, 4), (3, 1, 4, 2), (3, 2, 1, 4), (3, 2, 4, 1), (3, 4, 1, 2), (3, 4, 2, 1), (4, 1, 2, 3), (4, 1, 3, 2), (4, 2, 1, 3), (4, 2, 3, 1), (4, 3, 1, 2), (4, 3, 2, 1)]
 ```
 
 ## 10 *args 和 **kwargs
 
-*args 为 位置参数，**kwargs 为关键字参数，在这两种参数前面的叫命名参数。
+`*args` 为位置参数，`**kwargs` 为关键字参数，在这两种参数前面的叫命名参数。
 
 `*` 的作用有两个，打包参数(pack)和拆分(或解包)参数(unpack).
 
