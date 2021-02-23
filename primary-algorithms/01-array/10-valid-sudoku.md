@@ -84,10 +84,12 @@ def is_valid_sudoku(board):
 ![1](https://tva1.sinaimg.cn/large/007S8ZIlly1giyhzihgz6j30ea0eegns.jpg)
 
 🍥 **考察要点**：哈希表
+
 🍬 **解题思路**：一次迭代。
 
 - 枚举子数独：`box_index = (row / 3) * 3 + columns / 3`
 - 如何确保**行 / 列 / 子数独**没有重复项：利用 `value -> count` 哈希映射来跟踪已遇到的值。
 
 🍉 **时间复杂度**：O(1), 因为只对81个单元进行了一次迭代。
+
 🍭 **空间复杂度**：O(1)

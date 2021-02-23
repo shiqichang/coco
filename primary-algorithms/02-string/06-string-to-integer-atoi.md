@@ -108,7 +108,9 @@ class Solution(object):
 ![2](https://tva1.sinaimg.cn/large/007S8ZIlly1gizeyd3kz6j316a09wdgm.jpg)
 
 🍥 **考察要点**：正则表达式、自动机、确定有限状态机(DFA)
+
 🍬 **解题思路**：正则匹配，考虑越界；自动机，自动机记录当前已输入的数字，只要在 `s'` 为 `in_number` 时，更新输入的数字。
 
 🍉 **时间复杂度**：O(n)
+
 🍭 **空间复杂度**：O(1)
