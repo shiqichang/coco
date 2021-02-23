@@ -42,6 +42,7 @@ def entry_node_of_loop(pHead):
 ```
 
 🍥 **考察要点**：单链表、哈希、双指针
+
 🍬 **解题思路**：哈希法；**Floyd 算法**。
 
 - 哈希法：用一个 `set` 保存已经访问过的结点。遍历整个列表并返回第一个出现重复的结点。时间/空间复杂度均为 O(n);
@@ -49,4 +50,5 @@ def entry_node_of_loop(pHead):
   - `2 * distance(tortoise) == distance(hare)` -> `2(F+a) = F+a+b+a` -> `F=b`
 
 🍉 **时间复杂度**：O(n)
+
 🍭 **空间复杂度**：O(1)

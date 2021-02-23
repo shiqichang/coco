@@ -60,6 +60,7 @@ def cutRope(n):
 ![1](https://tva1.sinaimg.cn/large/007S8ZIlly1giv034r75wj30re0kqjsl.jpg)
 
 🍥 **考察要点**：数学推导、贪心算法
+
 🍬 **解题思路**：数学推导；贪心思路。
 
 - **数学推导**： 尽可能将绳子以长度3等分为多段。**切分规则：最优为3，次优为2，最差为1。**
@@ -73,4 +74,5 @@ def cutRope(n):
 ![2](https://tva1.sinaimg.cn/large/007S8ZIlly1giv0c1goujj31620fyjtr.jpg)
 
 🍉 **时间复杂度**：O(1)
+
 🍭 **空间复杂度**：O(1)

@@ -62,10 +62,13 @@ def moving_count(k, m, n):
 ![2](https://tva1.sinaimg.cn/large/007S8ZIlly1giuzvmy7kpj31560miwhb.jpg)
 
 🍥 **考察要点**：DFS、BFS
+
 🍬 **解题思路**：深度优先遍历；广度优先遍历。
+
 🍦 **数位和增量公式**：当 `(x+1) % 10 == 0` 时，`sx+1 = sx - 8`; 反之，`sx+1 = sx + 1`.
 
 ![3](https://tva1.sinaimg.cn/large/007S8ZIlly1giuzkdawapj314w0o2n5s.jpg)
 
 🍉 **时间复杂度**：O(mn)
+
 🍭 **空间复杂度**：O(mn)

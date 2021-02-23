@@ -33,7 +33,9 @@ class Solution(object):
 ![1](https://tva1.sinaimg.cn/large/007S8ZIlly1giusbf8e0gj30li0fk0v0.jpg)
 
 🍥 **考察要点**：二叉搜索树、中序遍历
+
 🍬 **解题思路**：二叉搜索树的中序遍历是**递增序列**。
 
 🍉 **时间复杂度**：O(n)
+
 🍭 **空间复杂度**：O(n)

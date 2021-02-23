@@ -118,6 +118,7 @@ def copy_random_list(head):
 ![1](https://tva1.sinaimg.cn/large/007S8ZIlly1gimshk3wuij30pc0ckgoo.jpg)
 
 🍥 **考察要点**：链表、DFS、BFS、递归、迭代
+
 🍬 **解题思路**：**图**的基本单元是**顶点**，顶点之间的关联成为**边**。题中的链表可以看成一个图。
 
 - **深度优先搜索**：Depth First Search, DFS
@@ -127,4 +128,5 @@ def copy_random_list(head):
 - **迭代优化**：将链表扩展，在每个链表结点的旁边拷贝，`A->B->C` 变成 `A->A'->B->B'->C->C'`，然后将拷贝的结点分离出来。此时**空间复杂度**为 O(1).
 
 🍉 **时间复杂度**：O(n)
+
 🍭 **空间复杂度**：O(n)

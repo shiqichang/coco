@@ -64,6 +64,7 @@ class Solution(object):
 ![1](https://tva1.sinaimg.cn/large/007S8ZIlly1giq7d223jnj30nk0hitbu.jpg)
 
 🍥 **考察要点**：二叉搜索树、递归、分治、中序遍历、双向链表
+
 🍬 **解题思路**：二叉搜索树的**中序遍历**为**递增序列**。算法流程如下👇：
 
 1. **终止条件**：当结点 *cur* 为空，直接返回；
@@ -75,4 +76,5 @@ class Solution(object):
 4. 递归右子树，即 `dfs(cur.right)`.
 
 🍉 **时间复杂度**：O(n)
+
 🍭 **空间复杂度**：O(n)

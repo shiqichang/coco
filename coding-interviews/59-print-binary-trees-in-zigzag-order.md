@@ -95,6 +95,7 @@ def level_order(root):
 ![1](https://tva1.sinaimg.cn/large/007S8ZIlly1giumdk3troj30ko0c0jtm.jpg)
 
 🍥 **考察要点**：二叉树、队列、层次遍历
+
 🍬 **解题思路**：打印顺序交替变化。
 
 - 层序遍历➕双端队列：奇数层添加到链表**尾部**，偶数层添加到链表**头部**；
@@ -102,4 +103,5 @@ def level_order(root):
 - 层序遍历➕倒序：**偶数层倒序**。
 
 🍉 **时间复杂度**：O(n)
+
 🍭 **空间复杂度**：O(n)

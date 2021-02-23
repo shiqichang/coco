@@ -50,10 +50,12 @@ public class Solution {
 ```
 
 🍥 **考察要点**：队列、栈
+
 🍬 **解题思路**：栈是 FILO, 队列是 FIFO.
 
 - 插入时直接插入 stack1;
 - 弹出时，当 stack2 不为空，弹出 stack2 栈顶元素，如果 stack2 为空，将 stack1 的全部逐个出栈入栈 stack2，再弹出 stack2 栈顶元素。
 
 🍉 **时间复杂度**：O(1)
+
 🍭 **空间复杂度**：O(n)

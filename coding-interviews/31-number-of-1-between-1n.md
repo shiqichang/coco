@@ -29,6 +29,7 @@ def number_of_between1_and_n(n):
 ```
 
 🍥 **考察要点**：数学、递推
+
 🍬 **解题思路**：求 1~n 的个位、十位、百位、...的 1 出现次数相加。设 `n` 为 `x` 位数：
 
 - `ni` 称为 **当前位**  *cur*,  `ni-1ni-2...n2n1` 称为 **低位** *low*, `nxnx-1...ni+2ni+1` 称为 **高位** *high*, `10^i` 称为 **位因子** *digit*.
@@ -38,4 +39,5 @@ def number_of_between1_and_n(n):
   - `cur >= 2` -> `high * digit + digit`
 
 🍉 **时间复杂度**：O(logn)
+
 🍭 **空间复杂度**：O(1)
