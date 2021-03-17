@@ -1377,3 +1377,5 @@ vector<int> nextGreatorElement(vector<int>& nums) {
 ```
 
 ### 9. 单调队列
+
+队列中的元素全都是单调递增（或递减）的。
